@@ -31,10 +31,9 @@ public class LoginServlet extends HttpServlet {
         boolean flag = login.isUser(username, password);
         if (flag) {
             HttpSession session = request.getSession();
+            /*将用户名存入session中*/
             session.setAttribute("username", username);
-            session.setMaxInactiveInterval(60);
             response.sendRedirect(request.getContextPath() + "/cart.jsp");
-
         } else {
             request.setAttribute("msg", "账号或密码错误！");
             request.getRequestDispatcher("/login.jsp").forward(request, response);

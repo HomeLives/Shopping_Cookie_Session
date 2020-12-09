@@ -15,4 +15,10 @@ public class ProductDaoImpl extends BaseDao implements ProductDao {
         List<Product> list = search(Product.class, "select * from product");
         return list;
     }
+
+    @Override
+    public Product getById(int id) {
+        List<Product> list = search(Product.class, "select * from product where id = ?", id);
+        return list.get(0);
+    }
 }

@@ -15,4 +15,12 @@ public interface ProductDao {
      * @return
      */
     List<Product> getAll();
+
+    /**
+     * 根据id查找商品
+     *
+     * @param id
+     * @return
+     */
+    Product getById(int id);
 }
