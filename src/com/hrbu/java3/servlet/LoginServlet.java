@@ -21,13 +21,12 @@ import java.util.List;
  */
 @WebServlet("/loginServlet")
 public class LoginServlet extends HttpServlet {
-    private LoginServiceImpl login = new LoginServiceImpl();
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");
         String username = request.getParameter("username");
         String password = request.getParameter("password");
+        LoginServiceImpl login = new LoginServiceImpl();
         boolean flag = login.isUser(username, password);
         if (flag) {
             HttpSession session = request.getSession();
