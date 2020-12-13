@@ -40,5 +40,6 @@
     <orderEntry type="library" name="mysql-connector-java-5.1.49-bin" level="project" />
     <orderEntry type="library" name="javax.servlet.jsp.jstl (2)" level="project" />
     <orderEntry type="library" name="Tomcat 8.5.59" level="application_server_libraries" />
+    <orderEntry type="library" name="fastjson-1.2.62" level="project" />
   </component>
 </module>
